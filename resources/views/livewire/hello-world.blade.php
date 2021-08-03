@@ -7,4 +7,8 @@
         <option>Adios</option>
     </select>
     {{ implode(', ', $greeting) }} {{ strtoupper($name) }} @if($loud)！ @endif
+
+    <form action="#" wire:submit.prevent="$set('name', 'Bingo')">
+        <button type="submit">Reset Name</button>
+    </form>
 </div>
