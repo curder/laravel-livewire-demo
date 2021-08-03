@@ -9,8 +9,7 @@
     <livewire:styles />
 </head>
 <body>
-    @livewire('hello-world')
-    <livewire:hello-world />
+    <livewire:hello-world></livewire:hello-world>
 
     <livewire:scripts />
 </body>
