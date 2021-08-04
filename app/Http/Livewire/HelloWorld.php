@@ -2,40 +2,20 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Contact;
 use Livewire\Component;
 
 class HelloWorld extends Component
 {
-    public $name = 'Curder';
+    public $contacts = [];
+
+    protected $listeners = [
+        'foo' => '$refresh',
+    ];
 
     public function mount($name)
     {
-        $this->name = $name;
-    }
-
-    public function hydrate()
-    {
-        //
-    }
-
-    public function updating()
-    {
-        //
-    }
-
-    public function updatingName()
-    {
-        //
-    }
-
-    public function updated()
-    {
-        //
-    }
-
-    public function updatedName()
-    {
-        //
+        $this->contacts = Contact::all();
     }
 
     public function render()
