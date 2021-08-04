@@ -8,14 +8,9 @@ class SayHi extends Component
 {
     public $contact;
 
-    protected $listeners = [
-        'refreshChildren' => '$refresh',
-        'foo' => '$refresh'
-    ];
-
-    public function emitFoo()
+    public function mount($contact)
     {
-        $this->emitUp('foo');
+        $this->contact = $contact;
     }
 
     public function render()

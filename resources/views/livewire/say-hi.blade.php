@@ -1,3 +1,5 @@
 <div>
-    Hi {{ $contact->name }} - {{ now() }} <button wire:click="emitFoo">Refresh</button>
+    Hi {{ $contact->name }} {{ now() }}
+
+    <button wire:click="$refresh">Refresh</button>
 </div>
